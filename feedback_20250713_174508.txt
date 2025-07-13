@@ -1,0 +1,10 @@
+URL: https://github.com/Trish-Pat/Exercises_XP_Webscrapping/blob/main/daily_challenge_webscrapping.py
+suggestions for improvement:
+- The code uses `select_one` which is generally efficient for single element selection.  Consider using more robust error handling (e.g., try-except blocks) for cases where elements might be missing, instead of appending None. This would improve robustness. 
+- The code could include more informative logging or print statements to aid debugging and monitoring (e.g., print the URL being scraped, more detailed messages about any errors encountered).
+Brief justification:
+- correctness: The code successfully fetches the webpage, saves it, parses it using BeautifulSoup, extracts titles and descriptions, creates a Pandas DataFrame, and prints it.  It directly addresses all the tasks outlined in the chapter content. The minor deduction is due to the lack of robust error handling for missing elements.
+- readability: The code is well-structured and easy to follow. Variable names are descriptive.  However, adding more comments would further enhance readability, especially regarding the logic for handling missing elements.
+- performance: The code's performance is acceptable for this task.  The use of `select_one` is efficient, but for extremely large pages or more complex extractions, optimizations might be needed. The single file handling also limits performance improvement from parallelization.
+- security: The code does not have any security vulnerabilities as it's only fetching a public webpage and doesn't involve any sensitive data or user interaction.
+
